@@ -3,60 +3,55 @@ package com.example.manasaa.task1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import static com.example.manasaa.task1.R.mipmap.ic_launcher;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG= MainActivity.class.getSimpleName();
-    Button button1,button2,button3;
-    TextView textView;
+    private Button button1,button2,button3;
+    TextView txtMessage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG,"*ON-CREATE*");
         setContentView(R.layout.activity_main);
 
-
         button1=(Button)findViewById(R.id.button1);
         button2=(Button)findViewById(R.id.button2);
         button3=(Button)findViewById(R.id.button3);
-        textView=(TextView)findViewById(R.id.textView);
+        txtMessage =(TextView)findViewById(R.id.textView);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setText("This is button 1");
-                textView.setVisibility(View.VISIBLE);
-                button1.setEnabled(false);
-                button2.setEnabled(true);
-                button3.setEnabled(true);
-            }
-        });
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+    }
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setText("This is button 2");
-                textView.setVisibility(View.VISIBLE);
-                button1.setEnabled(true);
-                button2.setEnabled(false);
-                button3.setEnabled(true);
-            }
-        });
 
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setText("This is button 3");
-                textView.setVisibility(View.VISIBLE);
-                button1.setEnabled(true);
-                button2.setEnabled(true);
-                button3.setEnabled(false);
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        if (R.id.button1 == v.getId()) {
+            txtMessage.setText(R.string.msgForbutton1 );
+            txtMessage.setVisibility(View.VISIBLE);
+            button1.setEnabled(false);
+            button2.setEnabled(true);
+            button3.setEnabled(true);
+        } else if (R.id.button2 == v.getId()) {
+            txtMessage.setText(R.string.msfForButton2);
+            txtMessage.setVisibility(View.VISIBLE);
+            button1.setEnabled(true);
+            button2.setEnabled(false);
+            button3.setEnabled(true);
+        } else {
+            txtMessage.setText(R.string.msgForButton3);
+            txtMessage.setVisibility(View.VISIBLE);
+            button1.setEnabled(true);
+            button2.setEnabled(true);
+            button3.setEnabled(false);
+
+        }
     }
 
     @Override
@@ -96,4 +91,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG,"*ONDESTROY*");
 
     }
+
+
 }

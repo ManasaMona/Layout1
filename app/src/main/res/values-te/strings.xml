@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">పని</string>
+    <string name="button1">బటన్ 1</string>
+    <string name="button2" >బటన్ 2</string>
+    <string name="button3" >బటన్ 3</string>
+    <string name="msgForbutton1">ఈ బటన్  1</string>
+    <string name="msfForButton2">ఈ బటన్  2</string>
+    <string name="msgForButton3">ఈ బటన్  3</string>
+</resources>

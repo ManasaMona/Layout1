@@ -1,0 +1,12 @@
+
+<resources>
+<string name="app_name">कार्य 1</string>
+<string name="button1">बटन 1</string>
+<string name="button2">बटन 2</string>
+<string name="button3" >बटन 3</string>
+    <string name="msgForbutton1">इस बटन है 1</string>
+    <string name="msfForButton2">इस बटन है 2</string>
+    <string name="msgForButton3">इस बटन है 3</string>
+
+
+</resources>

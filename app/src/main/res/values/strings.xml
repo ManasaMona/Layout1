@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Task1</string>
-    <string name="button1">Button 1</string>
-    <string name="button2">Button 2</string>
-    <string name="button3">Button 3</string>
+    <string name="app_name" >Task1</string>
+    <string name="button1" translatable="false">Button 1</string>
+    <string name="button2" translatable="false">Button 2</string>
+    <string name="button3" translatable="false">Button 3</string>
+    <string name="msgForbutton1">This is button 1</string>
+    <string name="msfForButton2">This is button 2</string>
+    <string name="msgForButton3">This is button 3</string>
 
 
 </resources>
